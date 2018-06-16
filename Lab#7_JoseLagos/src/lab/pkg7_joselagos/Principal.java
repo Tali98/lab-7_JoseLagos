@@ -305,14 +305,15 @@ public class Principal extends javax.swing.JFrame {
                 p = listaCarros.get(a);
             }
         }
-        listacrear.add(p);
+        
         Print2(p);
+        listacrear.add(p);
      
         for (int c = listacrear.size() - 1; a >= 0; c--) {
             listacrear.add(listacrear.get(c));
         }
         adminTabla table = new adminTabla(listacrear,name);
-        table.run();
+        table.start();
 
 
     }//GEN-LAST:event_jButton3MouseClicked

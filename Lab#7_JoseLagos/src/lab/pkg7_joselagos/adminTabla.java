@@ -52,11 +52,12 @@ public class adminTabla extends Thread {
     public void run() {
         t.setVisible(true);
         for (int k = 0; k < piezas.size(); k++) {
-            DefaultTableModel m = new DefaultTableModel();
+            DefaultTableModel m = (DefaultTableModel) t.tablita.getModel();
             Object row[] = {p, piezas.get(k).getNombre(), piezas.get(k).getTiempo()};
             m.addRow(row);
             int b = piezas.get(k).getTiempo();
             int c = b * 1000;
+            
             try {
                 Thread.sleep(c);
             } catch (Exception e) {
